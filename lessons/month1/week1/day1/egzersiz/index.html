@@ -8,8 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     body { font-family: 'Inter', sans-serif; }
-    .task { border-left: 3px solid #3b82f6; padding-left: 1rem; margin-bottom: 1.5rem; }
-    .task-done { border-color: #10b981; }
+    .task { border-left: 3px solid #10b981; padding-left: 1.25rem; margin-bottom: 2rem; }
+    .badge { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 9999px; font-weight: 700; font-size: 0.9rem; flex-shrink: 0; }
+    .tip { background: #f0fdf4; border-left: 3px solid #10b981; padding: 0.75rem 1rem; border-radius: 0 0.5rem 0.5rem 0; color: #166534; font-size: 0.9rem; margin-top: 0.75rem; }
+    .word-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .word-table th { background: #f1f5f9; color: #475569; font-weight: 600; padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
+    .word-table td { padding: 0.45rem 0.75rem; border-bottom: 1px solid #f1f5f9; color: #334155; }
+    .word-table tr:last-child td { border-bottom: none; }
   </style>
 </head>
 <body class="bg-slate-50 min-h-screen">
@@ -17,26 +22,120 @@
 
     <div class="mb-8">
       <span class="text-xs font-semibold uppercase tracking-widest text-emerald-500">Egzersiz · Hafta 1 / Gün 1</span>
-      <h1 class="text-3xl font-bold text-slate-900 mt-2">Egzersiz Başlığı</h1>
-      <p class="text-slate-500 mt-2">Aşağıdaki görevleri sırasıyla tamamla.</p>
+      <h1 class="text-3xl font-bold text-slate-900 mt-2">Günlük Alışkanlık Egzersizleri</h1>
+      <p class="text-slate-500 mt-2">Aşağıdaki üç egzersizi sırasıyla tamamla. Bunlar teknik değil, <strong>geliştirici zihniyeti</strong> için yapılan günlük pratiklerdir.</p>
     </div>
 
-    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 space-y-6">
+    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 space-y-10">
 
+      <!-- Egzersiz 1 -->
       <div class="task">
-        <h3 class="font-semibold text-slate-800 mb-1">Görev 1</h3>
-        <p class="text-slate-600">Egzersiz görevini buraya yaz.</p>
+        <div class="flex items-center gap-3 mb-3">
+          <span class="badge bg-emerald-100 text-emerald-700">1</span>
+          <h3 class="text-lg font-bold text-slate-800">İngilizce Kelime Öğrenme</h3>
+        </div>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Yazılım dünyasında İngilizce dokümantasyon okuyabilmek kritik bir beceridir. En çok kullanılan 500 İngilizce kelimeyi kağıda yazarak öğren — <strong>yazmak, okumaktan çok daha kalıcıdır</strong>.
+        </p>
+
+        <h4 class="font-semibold text-slate-700 mb-2">Yöntem</h4>
+        <ol class="list-decimal pl-5 text-slate-600 space-y-1 text-sm leading-relaxed">
+          <li>Aşağıdan bugünkü 10 kelimeyi seç.</li>
+          <li>Her kelimeyi İngilizce ve Türkçe anlamıyla bir kağıda yaz.</li>
+          <li>Kağıdı kapat, kelimeyi İngilizce söyle ve Türkçe karşılığını hatırlamaya çalış.</li>
+          <li>Aklına gelmeyenlerin yanına işaret koy; bunları ertesi gün tekrar et.</li>
+        </ol>
+
+        <div class="mt-4 overflow-x-auto">
+          <table class="word-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>İngilizce</th>
+                <th>Türkçe</th>
+                <th>#</th>
+                <th>İngilizce</th>
+                <th>Türkçe</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>the</td><td>bu / o (belirli)</td><td>6</td><td>in</td><td>içinde</td></tr>
+              <tr><td>2</td><td>be</td><td>olmak</td><td>7</td><td>it</td><td>o (nesne)</td></tr>
+              <tr><td>3</td><td>to</td><td>-e / -a / için</td><td>8</td><td>you</td><td>sen / siz</td></tr>
+              <tr><td>4</td><td>of</td><td>-in / -nın</td><td>9</td><td>have</td><td>sahip olmak</td></tr>
+              <tr><td>5</td><td>and</td><td>ve</td><td>10</td><td>that</td><td>şu / ki</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tip">💡 Her gün yeni 10 kelime ekle. 50 günde 500 kelimeyi tamamlarsın — günde sadece 5 dakika yeterli.</div>
       </div>
 
+      <!-- Egzersiz 2 -->
       <div class="task">
-        <h3 class="font-semibold text-slate-800 mb-1">Görev 2</h3>
-        <p class="text-slate-600">İkinci görevi buraya ekle.</p>
+        <div class="flex items-center gap-3 mb-3">
+          <span class="badge bg-emerald-100 text-emerald-700">2</span>
+          <h3 class="text-lg font-bold text-slate-800">10 Parmak Yazı Pratiği</h3>
+        </div>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Hızlı ve hatasız yazmak, kod yazarken seni düşünce akışından koparmaz. Bir 10 parmak programı kur ve bugün en az <strong>10–20 dakika</strong> egzersiz yap.
+        </p>
+
+        <h4 class="font-semibold text-slate-700 mb-2">Önerilen Programlar</h4>
+        <ul class="list-disc pl-5 text-slate-600 space-y-1 text-sm leading-relaxed">
+          <li><strong>Klavaro</strong> — ücretsiz, masaüstü, Türkçe klavye desteği var (<a href="https://klavaro.sourceforge.io" class="text-blue-600 underline" target="_blank">klavaro.sourceforge.io</a>)</li>
+          <li><strong>Keybr.com</strong> — tarayıcı tabanlı, adaptif öğrenme, kayıt gerektirmez (<a href="https://www.keybr.com" class="text-blue-600 underline" target="_blank">keybr.com</a>)</li>
+          <li><strong>Typing.com</strong> — yapılandırılmış kurs formatı (<a href="https://www.typing.com" class="text-blue-600 underline" target="_blank">typing.com</a>)</li>
+        </ul>
+
+        <h4 class="font-semibold text-slate-700 mt-4 mb-2">Bugünkü Hedef</h4>
+        <ul class="list-disc pl-5 text-slate-600 space-y-1 text-sm">
+          <li>Programı kur ve ilk dersi tamamla</li>
+          <li>Minimum <strong>10 dakika</strong>, ideal <strong>20 dakika</strong> egzersiz yap</li>
+          <li>Mevcut hızını not al (örn: 25 wpm) — ilerlemeni ölçmek için başlangıç noktası olacak</li>
+        </ul>
+
+        <div class="tip">💡 Hedef: <strong>60+ wpm</strong>. Ortalama programcı yazma hızı ~50 wpm; 60+ ile akıcı hissedirsin. Günde 15 dakika ile 3–4 haftada ulaşabilirsin.</div>
+      </div>
+
+      <!-- Egzersiz 3 -->
+      <div class="task">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="badge bg-emerald-100 text-emerald-700">3</span>
+          <h3 class="text-lg font-bold text-slate-800">Hızlı Arama ve AI Kullanımı</h3>
+        </div>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Bir geliştiricinin en güçlü becerilerinden biri, herhangi bir konuda <strong>1 dakikadan kısa sürede özet bilgi sahibi olabilmektir</strong>. Bu egzersizde Gemini ve ChatGPT'yi kullanarak hızlı araştırma pratiği yapacaksın.
+        </p>
+
+        <h4 class="font-semibold text-slate-700 mb-2">Araçlar</h4>
+        <ul class="list-disc pl-5 text-slate-600 space-y-1 text-sm">
+          <li><strong>Gemini</strong> — <a href="https://gemini.google.com" class="text-blue-600 underline" target="_blank">gemini.google.com</a></li>
+          <li><strong>ChatGPT</strong> — <a href="https://chatgpt.com" class="text-blue-600 underline" target="_blank">chatgpt.com</a></li>
+        </ul>
+
+        <h4 class="font-semibold text-slate-700 mt-4 mb-2">Pratik Görev</h4>
+        <p class="text-slate-600 text-sm mb-3">Aşağıdaki konuların her birini Gemini veya ChatGPT'ye sor. Cevabı okuduktan sonra kendi cümlelerinle tek satırda özetle ve bir yere yaz. <strong>Her konu için 1 dakikayı aşma.</strong></p>
+        <ol class="list-decimal pl-5 text-slate-600 space-y-1 text-sm leading-relaxed">
+          <li>"WordPress ile statik site arasındaki fark nedir?"</li>
+          <li>"Git'te commit ne işe yarar?"</li>
+          <li>"PHP ile JavaScript arasındaki temel fark nedir?"</li>
+          <li>"MAMP neden kullanılır?"</li>
+          <li>Kendi seçtiğin herhangi bir teknik konu</li>
+        </ol>
+
+        <h4 class="font-semibold text-slate-700 mt-4 mb-2">Etkili Soru Şablonu</h4>
+        <div class="bg-slate-800 text-green-300 rounded-lg p-4 text-sm font-mono leading-relaxed">
+          "[Konu] nedir? Yeni başlayan birine 3 cümleyle açıkla."
+        </div>
+
+        <div class="tip">💡 AI araçları doğru soru sorulduğunda çok güçlüdür. "Ne?" yerine "Neden?" ve "Nasıl?" soruları daha derin cevaplar getirir.</div>
       </div>
 
     </div>
 
     <div class="mt-8 text-sm">
-      <button onclick="window.history.back()" class="text-slate-500 hover:text-slate-800">← Geri Dön</button>
+      <button onclick="window.history.back()" class="text-slate-500 hover:text-slate-800 flex items-center gap-1">← Geri Dön</button>
     </div>
   </div>
 </body>

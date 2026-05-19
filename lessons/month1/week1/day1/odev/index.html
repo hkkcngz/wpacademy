@@ -13,21 +13,51 @@
 
     <div class="mb-8">
       <span class="text-xs font-semibold uppercase tracking-widest text-violet-500">Ödev · Hafta 1 / Gün 1</span>
-      <h1 class="text-3xl font-bold text-slate-900 mt-2">Ödev Başlığı</h1>
-      <p class="text-slate-500 mt-2">Ödevi tamamla ve bir sonraki derse hazır ol.</p>
+      <h1 class="text-3xl font-bold text-slate-900 mt-2">Antigravity ve Claude Eklentisi</h1>
+      <p class="text-slate-500 mt-2">Bugünkü ödev çok kısa — ama bir sonraki dersin temeli.</p>
     </div>
 
-    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8">
-      <h2 class="text-xl font-semibold text-slate-800 mb-4">Görev</h2>
-      <p class="text-slate-600 leading-relaxed mb-4">Ödev içeriğini buraya ekle.</p>
+    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 space-y-6">
 
-      <div class="bg-violet-50 border border-violet-100 rounded-xl p-4 mt-6">
-        <p class="text-violet-700 text-sm font-medium">Teslim: Bir sonraki derse kadar tamamla.</p>
+      <!-- Görev 1 -->
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-violet-100 text-violet-700 flex items-center justify-center font-bold text-sm">1</div>
+        <div>
+          <h3 class="font-semibold text-slate-800 mb-1">Antigravity'yi Aktif Et</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Antigravity'yi aç, ilk kez çalıştığından emin ol. Program açılıyor ve bir dosya oluşturabiliyorsan hazırsın.
+          </p>
+        </div>
       </div>
+
+      <hr class="border-slate-100" />
+
+      <!-- Görev 2 -->
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-violet-100 text-violet-700 flex items-center justify-center font-bold text-sm">2</div>
+        <div>
+          <h3 class="font-semibold text-slate-800 mb-1">"Claude" Eklentisini Kur</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-3">
+            Antigravity içindeki Eklentiler (Extensions) panelini aç, arama kutusuna <code class="bg-slate-100 px-1 rounded text-xs">Claude</code> yaz ve resmi eklentiyi yükle.
+          </p>
+          <ol class="list-decimal pl-5 text-slate-600 text-sm space-y-1 leading-relaxed">
+            <li>Sol paneldeki eklentiler ikonuna tıkla (veya <kbd class="bg-slate-100 border border-slate-200 rounded px-1.5 py-0.5 text-xs font-mono">Ctrl+Shift+X</kbd>)</li>
+            <li>Arama kutusuna <code class="bg-slate-100 px-1 rounded text-xs">Claude</code> yaz</li>
+            <li>Resmi eklentiyi bul ve <strong>Yükle</strong>'ye bas</li>
+            <li>Yükleme tamamlanınca editörü yeniden başlat</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Teslim notu -->
+      <div class="bg-violet-50 border border-violet-100 rounded-xl p-4 mt-2">
+        <p class="text-violet-700 text-sm font-medium">✅ Teslim: Antigravity açılıyor ve Claude eklentisi kurulu — bu kadar. Bir sonraki derse hazırsın.</p>
+      </div>
+
     </div>
 
     <div class="mt-8 text-sm">
-      <button onclick="window.history.back()" class="text-slate-500 hover:text-slate-800">← Geri Dön</button>
+      <button onclick="window.history.back()" class="text-slate-500 hover:text-slate-800 flex items-center gap-1">← Geri Dön</button>
     </div>
   </div>
 </body>
