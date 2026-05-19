@@ -15,6 +15,11 @@
     .content h3 { font-size: 1.2rem; font-weight: 600; margin: 1.5rem 0 0.75rem; color: #334155; }
     .content p  { color: #475569; line-height: 1.8; margin-bottom: 1rem; }
     .content ul { list-style: disc; padding-left: 1.5rem; color: #475569; line-height: 1.8; margin-bottom: 1rem; }
+    .content ol { list-style: decimal; padding-left: 1.5rem; color: #475569; line-height: 1.8; margin-bottom: 1rem; }
+    .content li { margin-bottom: 0.35rem; }
+    .step-badge { display: inline-flex; align-items: center; justify-content: center; width: 1.75rem; height: 1.75rem; border-radius: 9999px; background: #0ea5e9; color: #fff; font-weight: 700; font-size: 0.85rem; margin-right: 0.5rem; flex-shrink: 0; }
+    .step-title { display: flex; align-items: center; font-size: 1.2rem; font-weight: 600; color: #334155; margin: 1.75rem 0 0.75rem; }
+    .tip { background: #f0f9ff; border-left: 3px solid #0ea5e9; padding: 0.75rem 1rem; border-radius: 0 0.5rem 0.5rem 0; color: #0369a1; font-size: 0.9rem; margin-bottom: 1rem; }
   </style>
 </head>
 <body class="bg-slate-50 min-h-screen">
@@ -23,32 +28,114 @@
     <!-- Başlık -->
     <div class="mb-8">
       <span class="text-xs font-semibold uppercase tracking-widest text-blue-500">Hafta 1 · Gün 1</span>
-      <h1 class="text-3xl font-bold text-slate-900 mt-2">WordPress Nedir? Kurulum ve Tanışma</h1>
-      <p class="text-slate-500 mt-2">Bu derste WordPress'in temellerini öğreneceğiz.</p>
+      <h1 class="text-3xl font-bold text-slate-900 mt-2">Tanışma ve Program Kurulumları</h1>
+      <p class="text-slate-500 mt-2">Git, Antigravity + Claude Eklentisi ve MAMP kurulumlarını gerçekleştiriyoruz.</p>
     </div>
 
     <!-- İçerik -->
     <div class="content bg-white rounded-2xl border border-slate-100 shadow-sm p-8">
 
-      <h2>WordPress Nedir?</h2>
+      <h2>Programa Genel Bakış</h2>
       <p>
-        WordPress, dünyanın en yaygın kullanılan İçerik Yönetim Sistemi'dir (CMS). Web sitelerinin %43'ünden fazlası WordPress ile çalışmaktadır.
+        Bu bootcamp boyunca WordPress geliştirme ortamı kurulumundan başlayarak tema yapısı, eklenti ekosistemi, REST API ve performans optimizasyonuna kadar kapsamlı bir yolculuk yapacağız. İlk gün, verimli çalışabilmek için geliştirme araçlarımızı kuruyoruz.
       </p>
 
-      <h2>Ders İçeriğini Buraya Ekle</h2>
+      <!-- Git -->
+      <h2>1. Git Kurulumu</h2>
       <p>
-        Bu şablonu kullanarak ders içeriğini düzenleyebilirsin. <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;p&gt;</code> ve <code>&lt;pre&gt;</code> etiketleri stili hazır gelir.
+        Git, kod değişikliklerini takip etmemizi ve projelerimizi yönetmemizi sağlayan versiyon kontrol sistemidir. WordPress geliştirme sürecinde temalar ve eklentiler üzerindeki değişiklikleri güvenle kayıt altına almak için kullanacağız.
       </p>
 
-      <pre><code>&lt;!-- Örnek kod bloğu --&gt;
-&lt;?php
-  echo "Merhaba WordPress!";
-?&gt;</code></pre>
+      <div class="step-title"><span class="step-badge">1</span> İndirme ve Kurulum</div>
+      <p>
+        <a href="https://git-scm.com/downloads" class="text-blue-600 underline" target="_blank">git-scm.com/downloads</a> adresine giderek işletim sisteminize uygun sürümü indirin ve kurulumu tamamlayın. Kurulum sihirbazında varsayılan seçenekleri bırakmak yeterlidir.
+      </p>
+
+      <div class="step-title"><span class="step-badge">2</span> Kimlik Tanımlama</div>
+      <p>Kurulumun ardından terminal / komut istemcisini açın ve aşağıdaki komutlarla kendinizi tanıtın:</p>
+      <pre><code>git config --global user.name "Adınız Soyadınız"
+git config --global user.email "eposta@adresiniz.com"</code></pre>
+
+      <div class="step-title"><span class="step-badge">3</span> Kurulumu Doğrulama</div>
+      <pre><code>git --version
+# Çıktı örneği: git version 2.x.x</code></pre>
+
+      <div class="tip">💡 Windows kullanıcıları kurulum sırasında "Git Bash" seçeneğini aktif bırakırsa UNIX komutlarını da kullanabilir.</div>
+
+      <!-- Antigravity + Claude -->
+      <h2>2. Antigravity Programı ve Claude Eklentisi Kurulumu</h2>
+      <p>
+        Antigravity, kod editörü olarak kullanacağımız geliştirme ortamıdır. Claude eklentisi ise yapay zeka destekli kod tamamlama ve açıklama özelliği sunar; bu sayede öğrenme sürecini hızlandırır.
+      </p>
+
+      <div class="step-title"><span class="step-badge">1</span> Antigravity Kurulumu</div>
+      <p>
+        Antigravity'nin resmi sitesinden güncel sürümü indirerek kurulumu tamamlayın. Kurulum sonrası programı ilk kez açtığınızda dil tercihi olarak Türkçe veya İngilizce seçebilirsiniz.
+      </p>
+
+      <div class="step-title"><span class="step-badge">2</span> Claude Eklentisini Yükleme</div>
+      <ol>
+        <li>Antigravity'yi açın ve sol paneldeki <strong>Eklentiler</strong> (Extensions) ikonuna tıklayın.</li>
+        <li>Arama kutusuna <code>Claude</code> yazın.</li>
+        <li>Resmi Claude eklentisini bulup <strong>Yükle</strong> butonuna basın.</li>
+        <li>Yükleme tamamlandıktan sonra editörü yeniden başlatın.</li>
+      </ol>
+
+      <div class="step-title"><span class="step-badge">3</span> API Anahtarı Tanımlama</div>
+      <p>
+        Claude eklentisini kullanabilmek için <a href="https://console.anthropic.com" class="text-blue-600 underline" target="_blank">console.anthropic.com</a> adresinden bir API anahtarı oluşturun. Anahtarı eklenti ayarlarına yapıştırarak bağlantıyı tamamlayın.
+      </p>
+
+      <div class="tip">💡 API anahtarınızı <code>.env</code> dosyasında saklayın ve bu dosyayı asla Git'e eklemeyin.</div>
+
+      <!-- MAMP -->
+      <h2>3. MAMP Kurulumu</h2>
+      <p>
+        MAMP (Mac, Apache, MySQL, PHP), yerel bilgisayarınızda bir web sunucusu ortamı oluşturur. WordPress'i internet bağlantısı olmadan çalıştırıp test etmemizi sağlar.
+      </p>
+
+      <div class="step-title"><span class="step-badge">1</span> İndirme</div>
+      <p>
+        <a href="https://www.mamp.info/en/downloads/" class="text-blue-600 underline" target="_blank">mamp.info/en/downloads</a> adresinden işletim sisteminize uygun <strong>MAMP &amp; MAMP PRO</strong> paketini indirin. (Ücretsiz MAMP sürümü yeterlidir.)
+      </p>
+
+      <div class="step-title"><span class="step-badge">2</span> Kurulum ve İlk Başlatma</div>
+      <ol>
+        <li>İndirilen dosyayı çalıştırın ve kurulumu tamamlayın.</li>
+        <li>MAMP'ı açın, <strong>Start Servers</strong> butonuna tıklayın.</li>
+        <li>Apache ve MySQL göstergeleri yeşile döndüğünde sunucular hazır demektir.</li>
+      </ol>
+
+      <div class="step-title"><span class="step-badge">3</span> Web Kök Dizini</div>
+      <p>WordPress dosyalarınızı aşağıdaki klasöre yerleştirin:</p>
+      <pre><code># macOS
+/Applications/MAMP/htdocs/
+
+# Windows
+C:\MAMP\htdocs\</code></pre>
+
+      <div class="step-title"><span class="step-badge">4</span> phpMyAdmin ile Veritabanı Oluşturma</div>
+      <p>
+        MAMP çalışırken tarayıcıdan <code>http://localhost:8888/phpMyAdmin</code> adresine gidin. Sol panelden <strong>Yeni</strong> (New) seçeneğine tıklayarak <code>wordpress_local</code> adında yeni bir veritabanı oluşturun.
+      </p>
+
+      <div class="tip">💡 MAMP varsayılan portu 8888'dir. Eğer 80 portunu kullanmak isterseniz MAMP &gt; Tercihler &gt; Portlar bölümünden değiştirebilirsiniz.</div>
+
+      <h2>Gün Sonu Kontrol Listesi</h2>
+      <ul>
+        <li>✅ Git kuruldu ve <code>git --version</code> komutu çalışıyor</li>
+        <li>✅ Git kullanıcı adı ve e-posta tanımlandı</li>
+        <li>✅ Antigravity kuruldu ve açılıyor</li>
+        <li>✅ Claude eklentisi Antigravity'de aktif</li>
+        <li>✅ MAMP kuruldu, Apache ve MySQL sunucuları çalışıyor</li>
+        <li>✅ phpMyAdmin erişilebilir durumda</li>
+      </ul>
 
       <h2>Kaynaklar</h2>
       <ul>
-        <li><a href="https://wordpress.org" class="text-blue-600 underline" target="_blank">WordPress.org Resmi Site</a></li>
-        <li><a href="https://developer.wordpress.org" class="text-blue-600 underline" target="_blank">WordPress Developer Docs</a></li>
+        <li><a href="https://git-scm.com/doc" class="text-blue-600 underline" target="_blank">Git Resmi Dokümantasyon</a></li>
+        <li><a href="https://www.mamp.info/en/documentation/" class="text-blue-600 underline" target="_blank">MAMP Dokümantasyon</a></li>
+        <li><a href="https://console.anthropic.com" class="text-blue-600 underline" target="_blank">Anthropic Console (Claude API)</a></li>
       </ul>
 
     </div>
