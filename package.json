@@ -1,0 +1,51 @@
+{
+  "name": "wpacademy",
+  "version": "1.0.0",
+  "description": "WordPress Bootcamp — 1 Aylık Eğitim Platformu by Hakkı Cengiz",
+  "main": "src/main/index.js",
+  "author": {
+    "name": "Hakkı Cengiz",
+    "email": "hakkicengiz7@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev":   "electron . --enable-logging",
+    "build:win":   "electron-builder --win",
+    "build:mac":   "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "build":       "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^42.1.0",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "appId": "com.hakkicengiz.wpacademy",
+    "productName": "WP Academy",
+    "directories": { "output": "dist" },
+    "files": [
+      "src/**/*",
+      "lessons/**/*",
+      "extras/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
